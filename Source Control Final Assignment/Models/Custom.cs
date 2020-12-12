@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace SourceaControlAssignment1
+namespace Source_Control_Final_Assignment
 {
     public class Custom : ValidationAttribute
     {

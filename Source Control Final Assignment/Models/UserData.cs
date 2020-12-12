@@ -29,10 +29,11 @@ namespace Source_Control_Final_Assignment.Models
         public string uname { get; set; }
 
         [DisplayName("Age")]
-        [Range(1, 50, ErrorMessage = "Age must be between 1-50 in years.")]
+        [Range(20, 50, ErrorMessage = "Age must be between 20-50 in years.")]
         public int age { get; set; }
 
-       
+        [DisplayName("Birth Day")]
+        [Source_Control_Final_Assignment.Custom]
         public DateTime bday { get; set; }
 
         [DisplayName("Address")]
@@ -55,6 +56,8 @@ namespace Source_Control_Final_Assignment.Models
         [Required]
         public string password { get; set; }
         public string path { get; set; }
+        [Required(ErrorMessage = "Upload your image.")]
+        [FileExtensions(Extensions ="jpg",ErrorMessage ="Error")]
         public HttpPostedFileBase image { get; set; }
     }
 }
