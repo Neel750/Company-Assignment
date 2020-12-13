@@ -55,7 +55,15 @@ namespace Source_Control_Final_Assignment.Models
         [DataType(DataType.Password)]
         [Required]
         public string password { get; set; }
+        [DisplayName("Confirm Password")]
+        [DataType(DataType.Password)]
+        [Required]
+        [Compare("Password",ErrorMessage = "Password and confirm password must be same.")]
+        public string confirm_password { get; set; }
+
+
         public string path { get; set; }
+        [DisplayName("Upload Your Photo.")]
         [Required(ErrorMessage = "Upload your image.")]
         [FileExtensions(Extensions ="jpg",ErrorMessage ="Error")]
         public HttpPostedFileBase image { get; set; }
