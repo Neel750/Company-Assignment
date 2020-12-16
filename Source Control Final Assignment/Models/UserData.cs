@@ -47,6 +47,7 @@ namespace Source_Control_Final_Assignment.Models
         [Required(ErrorMessage = "Contact No. is Required")]
         public Int64 contact { get; set; }
 
+        [Required]
         [DisplayName("E-mail")]
         [DataType(DataType.EmailAddress)]
         [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}", ErrorMessage = "Incorrect Email")]
@@ -63,7 +64,8 @@ namespace Source_Control_Final_Assignment.Models
 
 
         public string path { get; set; }
-        [DisplayName("Upload Your Photo.")]
+        
+        [DisplayName("Image")]
         [Required(ErrorMessage = "Upload your image.")]
         [FileExtensions(Extensions ="jpg",ErrorMessage ="Error")]
         public HttpPostedFileBase image { get; set; }

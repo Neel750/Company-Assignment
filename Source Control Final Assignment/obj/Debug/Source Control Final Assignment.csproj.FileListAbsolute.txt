@@ -18,33 +18,10 @@ G:\Company\Source Control Final Assignment\bin\roslyn\Microsoft.DiaSymReader.Nat
 G:\Company\Source Control Final Assignment\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\Microsoft.Managed.Core.targets
 G:\Company\Source Control Final Assignment\bin\roslyn\Microsoft.VisualBasic.Core.targets
-G:\Company\Source Control Final Assignment\bin\roslyn\Microsoft.Win32.Primitives.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.AppContext.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Collections.Immutable.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Console.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Diagnostics.StackTrace.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Globalization.Calendars.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.IO.Compression.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.IO.Compression.ZipFile.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.IO.FileSystem.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.IO.FileSystem.Primitives.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Net.Http.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Net.Sockets.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Reflection.Metadata.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Security.Cryptography.Encoding.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Security.Cryptography.Primitives.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Text.Encoding.CodePages.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Threading.Tasks.Extensions.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.ValueTuple.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Xml.ReaderWriter.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Xml.XmlDocument.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Xml.XPath.dll
-G:\Company\Source Control Final Assignment\bin\roslyn\System.Xml.XPath.XDocument.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\vbc.exe
 G:\Company\Source Control Final Assignment\bin\roslyn\vbc.exe.config
 G:\Company\Source Control Final Assignment\bin\roslyn\vbc.rsp
@@ -53,7 +30,6 @@ G:\Company\Source Control Final Assignment\bin\roslyn\VBCSCompiler.exe.config
 G:\Company\Source Control Final Assignment\bin\Antlr3.Runtime.dll
 G:\Company\Source Control Final Assignment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 G:\Company\Source Control Final Assignment\bin\Microsoft.Web.Infrastructure.dll
-G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Helpers.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Mvc.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Optimization.dll
@@ -69,7 +45,6 @@ G:\Company\Source Control Final Assignment\bin\System.Web.Razor.xml
 G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.xml
 G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.Deployment.xml
 G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.Razor.xml
-G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.xml
 G:\Company\Source Control Final Assignment\bin\Antlr3.Runtime.pdb
 G:\Company\Source Control Final Assignment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csproj.CoreCompileInputs.cache
@@ -80,7 +55,6 @@ G:\Company\Source Control Final Assignment\bin\EntityFramework.dll
 G:\Company\Source Control Final Assignment\bin\EntityFramework.SqlServer.dll
 G:\Company\Source Control Final Assignment\bin\EntityFramework.xml
 G:\Company\Source Control Final Assignment\bin\EntityFramework.SqlServer.xml
-G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csprojAssemblyReference.cache
 F:\Company-Assignment\Source Control Final Assignment\bin\Source Control Final Assignment.dll.config
 F:\Company-Assignment\Source Control Final Assignment\bin\Source Control Final Assignment.dll
 F:\Company-Assignment\Source Control Final Assignment\bin\Source Control Final Assignment.pdb
@@ -164,3 +138,8 @@ F:\Company-Assignment\Source Control Final Assignment\obj\Debug\Source Control F
 F:\Company-Assignment\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csproj.CopyComplete
 F:\Company-Assignment\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.dll
 F:\Company-Assignment\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.pdb
+G:\Company\Source Control Final Assignment\bin\roslyn\System.Buffers.dll
+G:\Company\Source Control Final Assignment\bin\roslyn\System.Memory.dll
+G:\Company\Source Control Final Assignment\bin\roslyn\System.Numerics.Vectors.dll
+G:\Company\Source Control Final Assignment\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csprojAssemblyReference.cache
