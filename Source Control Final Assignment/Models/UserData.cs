@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
+
 namespace Source_Control_Final_Assignment.Models
 {
     public class UserData
@@ -67,7 +69,7 @@ namespace Source_Control_Final_Assignment.Models
         
         [DisplayName("Image")]
         [Required(ErrorMessage = "Upload your image.")]
-        [FileExtensions(Extensions ="jpg",ErrorMessage ="Error")]
+        [FileExtensions(Extensions ="jpg,jpeg")]
         public HttpPostedFileBase image { get; set; }
     }
 }

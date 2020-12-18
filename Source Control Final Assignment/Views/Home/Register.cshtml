@@ -9,7 +9,7 @@
 <h2 style="padding-top:30px;">Register</h2>
 
 
-@using (Html.BeginForm("add", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("add", "Home", FormMethod.Post, new { enctype = "multipart/form-data", @id = "registerForm" }))
 {
     @Html.AntiForgeryToken()
 

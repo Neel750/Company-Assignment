@@ -142,4 +142,9 @@ G:\Company\Source Control Final Assignment\bin\roslyn\System.Buffers.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Memory.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Numerics.Vectors.dll
 G:\Company\Source Control Final Assignment\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+G:\Company\Source Control Final Assignment\bin\nlog.config
+G:\Company\Source Control Final Assignment\bin\NLog.dll
+G:\Company\Source Control Final Assignment\bin\NLog.xml
+G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.dll
+G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.xml
 G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csprojAssemblyReference.cache
