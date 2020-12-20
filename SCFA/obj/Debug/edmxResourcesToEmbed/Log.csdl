@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Log" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SCFALogEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="InsertLog">
+      <Parameter Name="level" Mode="In" Type="String" />
+      <Parameter Name="callSite" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="String" />
+      <Parameter Name="message" Mode="In" Type="String" />
+      <Parameter Name="stackTrace" Mode="In" Type="String" />
+      <Parameter Name="innerException" Mode="In" Type="String" />
+      <Parameter Name="additionalInfo" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

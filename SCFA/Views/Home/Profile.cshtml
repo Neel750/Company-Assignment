@@ -1,0 +1,185 @@
+﻿@model SCFA.Models.UserData
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<h2 style="padding-top:30px;">Profile</h2>
+
+<div>
+    <h4>@Session["UserName"]'s Data</h4>
+    <hr />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fname)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.fname)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.mname)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.mname)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.lname)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.lname)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.uname)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.uname)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.age)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.bday)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.bday)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.address)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.contact)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.contact)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.email)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.address)
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.address)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.image)
+            </th>
+            <td>
+                <img src="@Url.Content(Session["ImagePath"].ToString())" height="300" width="300" alt=@Session["UserName"] />
+            </td>
+
+        </tr>
+        <tr style="padding-bottom:50px;">
+            @Html.ActionLink("Download", "Download", "Home", new {@class="btn btn-primary "})
+        </tr>
+    </table>
+    @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.fname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.mname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.mname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.lname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.lname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.contact)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.contact)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.bday)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.bday)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+
+        </dl>*@
+</div>
+
+
+
+
+
+
+
+@*<h2 style="padding-top:30px;">Profile</h2>
+
+    <p>
+        @uname's Data
+    </p>*@
+
