@@ -1,174 +1,145 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using NLog;
+using SCFA.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Data.SqlClient;
-using Source_Control_Final_Assignment.Models;
-using System.IO;
+using System.Web.Security;
 
-namespace Source_Control_Final_Assignment.Controllers
+namespace SCFA.Controllers
 {
     public class HomeController : Controller
     {
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataReader dr;
-        static string username = null;
+        //Log into file.
+        readonly Logger loggerFile = LogManager.GetCurrentClassLogger();
+
+        //Log into database.
+        readonly Logger loggerDB = LogManager.GetLogger("databaseLogger");
+        //Database Entity.
+        private readonly SCFAEntities db = new SCFAEntities();
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
-        //Home/Login
+
+        [HttpGet]
+        //GET: Home/Login
         public ActionResult Login()
         {
             return View();
         }
-        //Home/Verify
-        //Verify Data Username and Password
         [HttpPost]
-        public ActionResult Verify(Login data)
-        {
-            String connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Source Control Final Assignment;Integrated Security=True";
-            con = new SqlConnection(connectionString);
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM Authentication WHERE username='" + data.uname + "'AND pwd='" + data.password + "'";
-            dr = cmd.ExecuteReader();
-            if (dr.Read())
-            {
-                username = data.uname;
-                con.Close();
-                FetchData();
-                return View("Profile");
-            }
-            else
-            {
-                con.Close();
-                return View("Error");
-            }
-        }
-
-        //Home/Profile
-        public new ActionResult Profile()
-        {
-            if(username == null)
-            {
-                return View("Login");
-            }
-            else
-            {
-                return View();
-            }
-        }
-
-        public void FetchData()
+        //POST: Home/Login
+        public ActionResult Login(LoginData model)
         {
             try
             {
-                String connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Source Control Final Assignment;Integrated Security=True";
-                con = new SqlConnection(connectionString);
-                cmd = new SqlCommand();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "Select * from UserData where uname='" + username + "'";
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                ViewData["fname"] = dr["fname"].ToString();
-                ViewData["mname"] = dr["mname"].ToString();
-                ViewData["lname"] = dr["lname"].ToString();
-                ViewData["uname"] = dr["uname"].ToString();
-                ViewData["age"] = (int)dr["age"];
-                ViewData["bday"] = DateTime.Parse(dr["bday"].ToString()).ToShortDateString();
-                ViewData["address"]= dr["address"].ToString();
-                ViewData["contact"] = (Int64)dr["contact"];
-                ViewData["email"] = dr["email"].ToString();
-                con.Close();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = "select path from Image where uname = '" + username + "'";
-                dr = cmd.ExecuteReader();
-                dr.Read();
-                ViewData["path"] = dr["path"].ToString();
-                con.Close();
-            }catch(Exception ex)
-            {
-                ex.ToString();
+                if (ModelState.IsValid)
+                {
+                    using (var db = new SCFAEntities())
+                    {
+                        var obj = db.UserDatas.Where(a => a.uname.Equals(model.uname) && a.pwd.Equals(model.pwd)).FirstOrDefault();
+                        if (obj != null)
+                        {
+                            UserData img = db.UserDatas.Find(model.uname);
+                            FormsAuthentication.SetAuthCookie(obj.uname.ToString(), false);
+                            Session["UserName"] = obj.uname;
+                            Session["ImagePath"] = "~/Images/"+obj.uname+".jpg";
+                            loggerFile.Info("Login Successffuly. " + obj.uname);
+                            loggerDB.Info("Login Successffuly " + obj.uname);
+                            return this.RedirectToAction("Profile");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Invalid Email Id or Password");
+                            return View("Login");
+                        }
+                    }
+                }
             }
+            catch(Exception ex)
+            {
+                loggerFile.Error(ex.ToString());
+                loggerDB.Error(ex.ToString());
+            }
+            return View(model);
         }
 
+        [HttpGet]
+        // GET: Home/Register
         public ActionResult Register()
         {
             return View();
         }
-
-        // POST: Home/Create
         [HttpPost]
-        public ActionResult add(FormCollection collection)
+        // POST: Home/Register
+        public ActionResult Register(UserData user, HttpPostedFileBase image)
         {
-            // TODO: Add insert logic here
-            UserData umodel = new UserData();
-            umodel.fname = HttpContext.Request.Form["fname"].ToString();
-            umodel.mname = HttpContext.Request.Form["mname"].ToString();
-            umodel.lname = HttpContext.Request.Form["lname"].ToString();
-            umodel.uname = HttpContext.Request.Form["uname"].ToString();
-            umodel.age = Convert.ToInt32(HttpContext.Request.Form["age"]);
-            umodel.bday = DateTime.Parse(HttpContext.Request.Form["bday"]);
-            umodel.address = HttpContext.Request.Form["address"].ToString();
-            umodel.contact = (Int64)Convert.ToInt64(HttpContext.Request.Form["contact"]);
-            umodel.email = HttpContext.Request.Form["email"].ToString();
-            umodel.password = HttpContext.Request.Form["password"].ToString();
-            umodel.image = Request.Files["image"];
-
-            string extension = ".jpg";
-            string filename = umodel.uname + extension;
-            umodel.path = "~/Upload/" + filename;
-            filename = Path.Combine(Server.MapPath("~/Upload/"), filename);
-            umodel.image.SaveAs(filename);
-            String connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Source Control Final Assignment;Integrated Security=True";
-            con = new SqlConnection(connectionString);
-            con.Open();
-            String query = "INSERT INTO Authentication (username, pwd) values ('" + umodel.uname + "','" + umodel.password + "')";
-            SqlCommand cmd = new SqlCommand(query, con);
-            int j = cmd.ExecuteNonQuery();
-            query = "INSERT INTO UserData(fname, mname, lname, uname, age, bday, address, contact, email) values ('"
-                + umodel.fname + "','" + umodel.mname + "','" + umodel.lname + "','" + umodel.uname + "','" + umodel.age +"','" + umodel.bday + "','" + umodel.address + "','" + umodel.contact + "','" + umodel.email + "')";
-            cmd = new SqlCommand(query, con);
-            int i = cmd.ExecuteNonQuery();
-            query = "INSERT INTO Image (uname, path) values ('" + umodel.uname + "','" + umodel.path + "')";
-            cmd = new SqlCommand(query, con);
-            int k = cmd.ExecuteNonQuery();
-            username = umodel.uname;
-            con.Close();
-            if (i > 0 && j > 0 && k > 0)
+            try
             {
-                FetchData();
-                return View("Profile");
+                string extension = Path.GetExtension(image.FileName);
+                string filename = user.uname + extension;
+                user.path = "~/Images/" + filename;
+                string smallImagepath = Path.Combine(Server.MapPath("~/Images/"), filename);
+          
+                db.UserDatas.Add(user);
+                if (db.SaveChanges() > 0)
+                {
+                     FormsAuthentication.SetAuthCookie(user.uname.ToString(), false);
+                     image.SaveAs(smallImagepath);
+                     loggerFile.Info("Registered Successffuly! " + user.uname);
+                     loggerDB.Info("Registered Successffuly! " + user.uname);
+                     ModelState.Clear();
+                     Session["UserName"] = user.uname;
+                     Session["ImagePath"] = user.path;
+                     return RedirectToAction("Profile", "Home");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                return RedirectToAction("Error");
+                loggerFile.Error(ex.ToString());
+                loggerDB.Error(ex.ToString());
             }
+            return View(user);
         }
 
+        
+        public ActionResult Profile()
+        {
+            //Finds the user data and view it.
+            UserData user = db.UserDatas.Find(Session["UserName"]);
+            return View(user);
+        }
+
+        [HttpGet]
+        //GET: Home/Logout
         public ActionResult Logout()
         {
-            username = null;
+            //Clear the session
+            Session.Clear();
             return View("Index");
         }
-        public ActionResult About()
+        [HttpGet]
+        public FileResult Download()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            //Download data in json format
+            //Use of Newtonsoft json.
+            UserData user = db.UserDatas.Find(Session["UserName"]);
+            string JSONResult = JsonConvert.SerializeObject(user);
+            string path = @"G:\Company\Source Control Final Assignment\Json\" + Session["UserName"] + ".json";
+            using (var tw = new StreamWriter(path, true))
+            {
+                tw.Write(JSONResult);
+                tw.Close();
+            }
+            byte[] fileBytes = System.IO.File.ReadAllBytes(path);
+            string fileName = Path.GetFileName(path);
+            System.IO.File.Delete(path);
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
         }
     }
 }

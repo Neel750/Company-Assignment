@@ -1,6 +1,7 @@
-G:\Company\Source Control Final Assignment\bin\Source Control Final Assignment.dll.config
-G:\Company\Source Control Final Assignment\bin\Source Control Final Assignment.dll
-G:\Company\Source Control Final Assignment\bin\Source Control Final Assignment.pdb
+G:\Company\Source Control Final Assignment\bin\NLog.config
+G:\Company\Source Control Final Assignment\bin\SCFA.dll.config
+G:\Company\Source Control Final Assignment\bin\SCFA.dll
+G:\Company\Source Control Final Assignment\bin\SCFA.pdb
 G:\Company\Source Control Final Assignment\bin\roslyn\csc.exe
 G:\Company\Source Control Final Assignment\bin\roslyn\csc.exe.config
 G:\Company\Source Control Final Assignment\bin\roslyn\csc.rsp
@@ -51,33 +52,35 @@ G:\Company\Source Control Final Assignment\bin\roslyn\vbc.rsp
 G:\Company\Source Control Final Assignment\bin\roslyn\VBCSCompiler.exe
 G:\Company\Source Control Final Assignment\bin\roslyn\VBCSCompiler.exe.config
 G:\Company\Source Control Final Assignment\bin\Antlr3.Runtime.dll
+G:\Company\Source Control Final Assignment\bin\EntityFramework.dll
+G:\Company\Source Control Final Assignment\bin\EntityFramework.SqlServer.dll
 G:\Company\Source Control Final Assignment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 G:\Company\Source Control Final Assignment\bin\Microsoft.Web.Infrastructure.dll
 G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.dll
+G:\Company\Source Control Final Assignment\bin\NLog.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Helpers.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Mvc.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Optimization.dll
 G:\Company\Source Control Final Assignment\bin\System.Web.Razor.dll
-G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.Deployment.dll
-G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.dll
-G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.Razor.dll
+G:\Company\Source Control Final Assignment\bin\System.Web.Webpages.Deployment.dll
+G:\Company\Source Control Final Assignment\bin\System.Web.Webpages.dll
+G:\Company\Source Control Final Assignment\bin\System.Web.Webpages.Razor.dll
 G:\Company\Source Control Final Assignment\bin\WebGrease.dll
-G:\Company\Source Control Final Assignment\bin\System.Web.Helpers.xml
-G:\Company\Source Control Final Assignment\bin\System.Web.Mvc.xml
-G:\Company\Source Control Final Assignment\bin\System.Web.Optimization.xml
-G:\Company\Source Control Final Assignment\bin\System.Web.Razor.xml
-G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.xml
-G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.Deployment.xml
-G:\Company\Source Control Final Assignment\bin\System.Web.WebPages.Razor.xml
-G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.xml
 G:\Company\Source Control Final Assignment\bin\Antlr3.Runtime.pdb
-G:\Company\Source Control Final Assignment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csproj.CoreCompileInputs.cache
-G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csproj.CopyComplete
-G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.dll
-G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.pdb
-G:\Company\Source Control Final Assignment\bin\EntityFramework.dll
-G:\Company\Source Control Final Assignment\bin\EntityFramework.SqlServer.dll
 G:\Company\Source Control Final Assignment\bin\EntityFramework.xml
 G:\Company\Source Control Final Assignment\bin\EntityFramework.SqlServer.xml
+G:\Company\Source Control Final Assignment\bin\Newtonsoft.Json.xml
+G:\Company\Source Control Final Assignment\bin\NLog.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Optimization.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Razor.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Webpages.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Webpages.Deployment.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Webpages.Razor.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Helpers.xml
+G:\Company\Source Control Final Assignment\bin\System.Web.Mvc.xml
+G:\Company\Source Control Final Assignment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csprojAssemblyReference.cache
+G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csproj.CoreCompileInputs.cache
+G:\Company\Source Control Final Assignment\obj\Debug\Source Control Final Assignment.csproj.CopyComplete
+G:\Company\Source Control Final Assignment\obj\Debug\SCFA.dll
+G:\Company\Source Control Final Assignment\obj\Debug\SCFA.pdb

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Source_Control_Final_Assignment
+namespace SCFA
 {
     public class RouteConfig
     {
