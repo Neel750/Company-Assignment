@@ -1,0 +1,74 @@
+/*About Us Title*/
+.about-section .team .container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+/*about us title*/
+.about-section h1{
+    padding: 5%;
+    text-align: center;
+    font-size: 36pt;
+    color: #000000;
+    font-weight: bolder;
+}
+/*about us text*/
+.about-section p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 14pt;
+    color: #000000;
+    font-weight: bolder;
+}
+/*team title*/
+.team h1{
+    text-align: center;
+    font-size: 36pt;
+    color: #FA8072;
+    font-weight: bolder;
+}
+/*team row*/
+.row{
+    position: relative;
+    display: table;
+    text-justify: auto;
+}
+/*team column*/
+.column {
+    float: left;
+    width: 30%;
+    padding: 1%;
+  }
+/*team card for details*/
+.card {
+    box-shadow: 0 4px 8px 0 #000000;
+    color: #ffffff;
+    margin: 8px;
+}
+/*card image properties*/
+.card img{
+    width: 380px;
+    height: 400px;
+}
+/*container properties*/
+.container{
+    width: 560px;
+}
+.container h2{
+    text-align: center;
+    padding: 5%;
+}
+.container button{
+    display: inline-block;
+    border-color: #ffffff;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    width: 100%;
+}
+.d-flex {
+    width: 500px;
+}
+.p-0 {
+    padding: 5%;
+} 

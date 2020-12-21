@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Contact
+        </title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Assignment On HTML">
+        <meta name="keywords" content="Assignment, neel.shah, html, css">
+        <meta name="author" content="Neel Shah">
+        <meta name="username" content="neel.shah">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/styles.css">       <!--Link to external css for header footer-->
+        <link rel="stylesheet" href="./CSS/contact-styles.css">       <!--Link to external css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .fa {
+                    padding: 20px;
+                    font-size: 15px;
+                    width: 15px;
+                    text-align: center;
+                    text-decoration: none;
+                    margin: 5px 2px;
+                    border-radius: 50%;
+                }
+
+                .fa:hover {
+                    opacity: 0.7;
+                }
+
+                .fa-facebook {
+                    background: #3B5998;
+                    color: white;
+                }
+
+                .fa-twitter {
+                    background: #55ACEE;
+                    color: white;
+                }
+
+                .fa-google {
+                    background: #dd4b39;
+                    color: white;
+                }
+
+                .fa-linkedin {
+                    background: #007bb5;
+                    color: white;
+                }
+
+                .fa-youtube {
+                    background: #bb0000;
+                    color: white;
+                }
+
+                .fa-instagram {
+                    background: #125688;
+                    color: white;
+                }
+
+        </style>
+
+    </head>
+    <body>
+        <!---Header Start-->
+        <div class="header">
+            <a href="index.html"><img class="logo" src="./Images/Logo.jpg" alt="Logo"></a>
+            <div class="header-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Service</a>
+                <a href="product.html">Product</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <!---Header End-->
+
+        <!--Contact Us -->
+        <div class="title">
+            <h1>Contact Form</h1>
+        </div>
+        <div class="container">
+        <form action="#">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+            <option value="india">India</option>
+            <option value="netherland">Netherland</option>
+            <option value="usa">USA</option>
+            <option value="uae">UAE</option>
+            <option value="finland">Finland</option>
+            <option value="france">France</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            <option value="denmark">Denmark</option>
+            <option value="iceland">Iceland</option>
+            <option value="norway">Norway</option>
+            <option value="south africa">South Africa</option>
+            <option value="japan">Japan</option>
+            <option value="belgium">Belgium</option>
+            <option value="germany">Germany</option>
+            <option value="sweden">Sweden</option>
+            </select>
+
+            <label for="subject">Message</label>
+            <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+
+        <footer>
+            <!--Footer Start-->
+            <div class="footer">
+                <!--Footer Title Start-->
+                <div class="footer-Title">
+                    <p style="font-size: 2.5em; text-decoration: underline;">
+                        Address
+                    </p>
+
+                    <!--Footer Address Start-->
+                    <div class="footer-address">
+                        <address>
+                            01, Saivrund Bunglows,<br>
+                            Nr. Dr. Chintan Vyas Hospital,<br>
+                            Umabhavan Road,<br>
+                            Borsad Chokdi,<br>
+                            Anand - 388001.<br>
+                        </address>
+                        E-mail : Company@xyz.com<br>
+                        Contact No.: 0123456789
+
+                    </div>
+                    <!--Footer Address End-->
+                </div>
+                <!--Footer Title End-->    
+
+                <!--Footer Menu Title Start-->
+                <div class="footer-menuTitle">
+                    <p style="font-size: 2.5em; text-decoration: underline; text-align: center;">
+                        Links
+                    </p>
+
+                    <!--Footer Menu Start-->
+                    <div class="footer-menu">
+                        <ul>
+                            <ol><a href="index.html">Home<br></a></ol>
+                            <ol><a href="about.html">About<br></a></ol>
+                            <ol><a href="service.html">Service<br></a></ol>
+                            <ol><a href="product.html">Product<br></a></ol>
+                            <ol><a href="contact.html">Contact<br></a></ol>
+                        </ul>
+                    </div>
+                    <!--Footer Menu End-->
+                </div>
+                <!--Footer Menu Title End--> 
+
+                <!--Social Media Container-->
+                <div class="container-footer">
+                    Connect With Us On:   
+                    <a href="https://facebook.com/" target="_blank" class="button facebook"><span><i class="fa fa-facebook" ></i></span><p>Facebook</p></a>
+                    <a href="https://twitter.com/" target="_blank" class="button twitter"><span><i class="fa fa-twitter" ></i></i></span><p>Twitter</p></a>
+                    <a href="https://plus.google.com/" target="_blank" class="button google-plus"><span><i class="fa fa-google-plus" ></i></span><p>Google +</p></a>
+                    <a href="https://www.linkedin.com/" target="_blank" class="button linkedin"><span><i class="fa fa-linkedin" ></i></span><p>Linkedin</p></a>
+                    <a href="https://www.instagram.com/" target="_blank" class="button instagram"><span><i class="fa fa-instagram" ></i></span><p>Instagram</p></a>
+                    <a href="https://youtube.com/" target="_blank" class="button youtube"><span><i class="fa fa-youtube" ></i></span><p>YouTube</p></a>
+                    <br><br>
+                    <span>&copy;</span>   2020 
+                    <a href="#" style="color: #ffffff;"> &nbsp; Company Name </a> &nbsp; || &nbsp; 
+                    <a href="#" style="color: #ffffff;"> &nbsp;Privacy Policy</a>
+                </div>   
+            </div>
+            <!--Footer End-->
+        </footer>
+
+    </body>
+</html>
