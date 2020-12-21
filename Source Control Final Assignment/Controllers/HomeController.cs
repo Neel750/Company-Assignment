@@ -110,6 +110,7 @@ namespace SCFA.Controllers
         
         public ActionResult Profile()
         {
+            //Finds the user data and view it.
             UserData user = db.UserDatas.Find(Session["UserName"]);
             return View(user);
         }
@@ -118,15 +119,18 @@ namespace SCFA.Controllers
         //GET: Home/Logout
         public ActionResult Logout()
         {
+            //Clear the session
             Session.Clear();
             return View("Index");
         }
         [HttpGet]
         public FileResult Download()
         {
+            //Download data in json format
+            //Use of Newtonsoft json.
             UserData user = db.UserDatas.Find(Session["UserName"]);
             string JSONResult = JsonConvert.SerializeObject(user);
-            string path = @"G:\Company\SCFA\Json\" + Session["UserName"] + ".json";
+            string path = @"G:\Company\Source Control Final Assignment\Json\" + Session["UserName"] + ".json";
             using (var tw = new StreamWriter(path, true))
             {
                 tw.Write(JSONResult);

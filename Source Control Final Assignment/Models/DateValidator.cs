@@ -1,20 +1,22 @@
-﻿using System;
+﻿//Server Side Custom Validation.
+//It will check if user has mistakelly entered today's date as birthdate.
+using System;
 using System.ComponentModel.DataAnnotations;
  
 namespace SCFA.Models
 {
     public class BDayCheck : ValidationAttribute
     {
-        private DateTime date = DateTime.Now;
+        private readonly DateTime date = DateTime.Now;//Get Today's date.
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             if (value != null)
             {
                 if (value is DateTime)
                 {
-                    if (Convert.ToDateTime(value) < date)
+                    if (Convert.ToDateTime(value) == date)
                     {
-                        return new ValidationResult("You have entered todays date.");
+                        return new ValidationResult("You have entered today's date.");
                     }
                 }
             }
