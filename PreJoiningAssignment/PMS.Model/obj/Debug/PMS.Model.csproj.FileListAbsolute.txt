@@ -1,0 +1,11 @@
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\PMS.Model.dll.config
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\PMS.Model.dll
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\PMS.Model.pdb
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\EntityFramework.dll
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\EntityFramework.SqlServer.dll
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\EntityFramework.xml
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\bin\Debug\EntityFramework.SqlServer.xml
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\obj\Debug\PMS.Model.csproj.CoreCompileInputs.cache
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\obj\Debug\PMS.Model.csproj.CopyComplete
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\obj\Debug\PMS.Model.dll
+H:\GateWay\PreJoiningAssignment\PreJoiningAssignment\PMS.Model\obj\Debug\PMS.Model.pdb

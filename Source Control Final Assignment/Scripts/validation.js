@@ -1,7 +1,7 @@
 ﻿//Configuration done in view.
 //default validation: required, email, minlength
 //custom validation: strongPassword, nowhitespace, lettersonly
-//methods: validate, addMethod
+//methods: validate, resetForm, addMethod
 $(function () {
     //Validates Password is Strong or Not.
     $.validator.addMethod('strongPassword', function (value, element) {
@@ -112,4 +112,9 @@ $(function () {
             form.submit();
         }
     });
+
+    $('#reset').click(function () {
+        validator.resetForm();//Reset Method
+    });
+
 });

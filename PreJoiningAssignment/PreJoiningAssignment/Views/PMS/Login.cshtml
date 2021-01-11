@@ -1,0 +1,76 @@
+﻿@model PMS.Model.UserData
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .col h2 {
+            padding: 10px;
+            padding-bottom: 3px;
+            text-align: center;
+        }
+
+        input {
+            width: 290px;
+        }
+    </style>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+</head>
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3 shadow p-3 mb-5 bg-white rounded">
+            <h2>Login Here</h2>
+            <hr />
+            @using (Html.BeginForm("Login", "PMS", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                if (TempData["LoginMessage"] != null)
+                {
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                                alert('@TempData["LoginMessage"]');
+                        });
+                    </script>
+                }
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Email, new { htmlAttributes = new { @class = "form-control form-control-lg" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control form-control-lg" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-info btn-lg btn-block">
+                        Login
+                    </button>
+                </div>
+            }
+            @Html.ActionLink("Don't have account?", "CreateUser", "PMS", new { area = "" }, new { @class = "navbar-item" })
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

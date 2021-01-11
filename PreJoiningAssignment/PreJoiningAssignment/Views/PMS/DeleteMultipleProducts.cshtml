@@ -1,0 +1,89 @@
+﻿@model IEnumerable<PMS.Model.ProductData>
+
+@{
+    ViewBag.Title = "DeleteMultipleProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    h2 {
+        text-align: center;
+    }
+
+    .card {
+        margin: 15px;
+        width: 400px !important;
+    }
+
+    .card-body {
+        padding: 10px;
+        border: 1px solid Black;
+        max-width: 400px !important;
+    }
+
+    .btn-padding {
+        padding: 5px;
+    }
+
+    .shortDescription {
+        column-span: 2;
+        width: 300px;
+    }
+
+    .searchBar {
+        padding: 5px;
+    }
+</style>
+<h2>Delete Products</h2>
+<form action="/PMS/DeleteMultipleProducts" method="post">
+    <div class="row gutters-sm">
+
+        @foreach (var item in Model)
+        {
+
+
+            <div class="card">
+                <div class="card-body shadow">
+                    <input type="checkbox" class="form-check-inline" value="@item.ProductID" name="ProductIds" id="ProductIds" />
+                    <img src="@Url.Content(item.SmallImage.ToString())" alt=@item.SmallImage width="380" height="300">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="mt-3">
+                            <h4 class="text-center">@item.ProductName</h4>
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(model => model.First().Category) :
+                                        </td>
+                                        <td>
+                                            @item.Category
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(model => model.First().Price) :
+                                        </td>
+                                        <td>
+                                            <span>&#8377;</span> @item.Price
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortDescription" colspan="2" rowspan="4">
+                                            @item.SmallDescription
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="justify-content-center align-items-center">
+        <input type="submit" value="Delete" onclick="return confirm('Are You Sure?')" class="btn btn-danger" style="width:100px;" />
+    </div>
+</form>

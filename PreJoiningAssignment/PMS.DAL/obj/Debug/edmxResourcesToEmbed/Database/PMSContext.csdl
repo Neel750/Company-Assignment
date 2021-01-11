@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ProductData">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SmallDescription" Type="String" MaxLength="250" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SmallImage" Type="String" MaxLength="250" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LongDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LongImage" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Name="Tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="UserData" Relationship="Self.FK_ProductData_UserData" FromRole="ProductData" ToRole="UserData" />
+  </EntityType>
+  <EntityType Name="UserData">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="ProductDatas" Relationship="Self.FK_ProductData_UserData" FromRole="UserData" ToRole="ProductData" />
+  </EntityType>
+  <Association Name="FK_ProductData_UserData">
+    <End Role="UserData" Type="Self.UserData" Multiplicity="1" />
+    <End Role="ProductData" Type="Self.ProductData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserData">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductData">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PMSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProductDatas" EntityType="Self.ProductData" />
+    <EntitySet Name="UserDatas" EntityType="Self.UserData" />
+    <AssociationSet Name="FK_ProductData_UserData" Association="Self.FK_ProductData_UserData">
+      <End Role="UserData" EntitySet="UserDatas" />
+      <End Role="ProductData" EntitySet="ProductDatas" />
+    </AssociationSet>
+    <EntitySet Name="Logs" EntityType="PMSModel.Log" />
+  </EntityContainer>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Level" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CallSite" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StackTrace" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="InnerException" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AdditionalInfo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LoggedOnDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

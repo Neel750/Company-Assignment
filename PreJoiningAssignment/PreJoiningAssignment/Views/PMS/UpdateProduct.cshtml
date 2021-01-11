@@ -1,0 +1,137 @@
+﻿@model PMS.Model.ProductData
+
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    h2 {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    input {
+        width: 480px !important;
+        max-width: 1200px;
+    }
+
+    .col {
+        padding-top: 10px;
+    }
+
+    .container-fluid {
+        padding-top: 50px;
+    }
+</style>
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6  shadow p-3 mb-5 bg-white rounded">
+            <h2>Edit &nbsp; @Html.DisplayFor(model => model.ProductName)</h2>
+            @using (Html.BeginForm("UpdateProduct", "PMS", FormMethod.Post, new { enctype = "multipart/form-data", @id = "registerForm" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.HiddenFor(model => model.ProductID, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.HiddenFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Category, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SmallDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.SmallDescription, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.SmallDescription, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SmallImage, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <img src="@Url.Content(Model.SmallImage.ToString())" alt=@Model.SmallImage width="250" height="250">
+                            @Html.TextBoxFor(model => model.smallFile, new { type = "file", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.SmallImage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LongDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.LongDescription, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LongDescription, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LongImage, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <img src="@Url.Content(Model.LongImage.ToString())" alt=@Model.LongImage width="500" height="350">
+                            @Html.TextBoxFor(model => model.largeFile, new { type = "file", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LongImage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Tags, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Tags, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div><br />
+                        <div style="padding-left:20px;">
+                            <button class="btn btn-outline-primary">
+                                @Html.ActionLink("Back", "Products")
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Logs">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Level" Type="varchar(max)" Nullable="false" />
+          <Property Name="CallSite" Type="varchar(max)" Nullable="false" />
+          <Property Name="Type" Type="varchar(max)" Nullable="false" />
+          <Property Name="Message" Type="varchar(max)" Nullable="false" />
+          <Property Name="StackTrace" Type="varchar(max)" Nullable="false" />
+          <Property Name="InnerException" Type="varchar(max)" Nullable="false" />
+          <Property Name="AdditionalInfo" Type="varchar(max)" Nullable="false" />
+          <Property Name="LoggedOnDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductData">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Category" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="SmallDescription" Type="nchar" MaxLength="250" Nullable="false" />
+          <Property Name="SmallImage" Type="nchar" MaxLength="250" Nullable="false" />
+          <Property Name="LongDescription" Type="varchar(max)" Nullable="false" />
+          <Property Name="LongImage" Type="nchar" MaxLength="250" />
+          <Property Name="Tags" Type="nvarchar(max)" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <EntityType Name="UserData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Contact" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" />
+        </EntityType>
+        <Association Name="FK_ProductData_UserData">
+          <End Role="UserData" Type="Self.UserData" Multiplicity="1" />
+          <End Role="ProductData" Type="Self.ProductData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserData">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductData">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PMSModelStoreContainer">
+          <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductData" EntityType="Self.ProductData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserData" EntityType="Self.UserData" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ProductData_UserData" Association="Self.FK_ProductData_UserData">
+            <End Role="UserData" EntitySet="UserData" />
+            <End Role="ProductData" EntitySet="ProductData" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ProductData">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Category" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SmallDescription" Type="String" MaxLength="250" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SmallImage" Type="String" MaxLength="250" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="LongDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LongImage" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Name="Tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="UserData" Relationship="Self.FK_ProductData_UserData" FromRole="ProductData" ToRole="UserData" />
+        </EntityType>
+        <EntityType Name="UserData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="ProductDatas" Relationship="Self.FK_ProductData_UserData" FromRole="UserData" ToRole="ProductData" />
+        </EntityType>
+        <Association Name="FK_ProductData_UserData">
+          <End Role="UserData" Type="Self.UserData" Multiplicity="1" />
+          <End Role="ProductData" Type="Self.ProductData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserData">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductData">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PMSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ProductDatas" EntityType="Self.ProductData" />
+          <EntitySet Name="UserDatas" EntityType="Self.UserData" />
+          <AssociationSet Name="FK_ProductData_UserData" Association="Self.FK_ProductData_UserData">
+            <End Role="UserData" EntitySet="UserDatas" />
+            <End Role="ProductData" EntitySet="ProductDatas" />
+          </AssociationSet>
+          <EntitySet Name="Logs" EntityType="PMSModel.Log" />
+        </EntityContainer>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Level" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CallSite" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="StackTrace" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="InnerException" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AdditionalInfo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LoggedOnDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PMSModelStoreContainer" CdmEntityContainer="PMSEntities">
+          <EntitySetMapping Name="ProductDatas">
+            <EntityTypeMapping TypeName="PMSModel.ProductData">
+              <MappingFragment StoreEntitySet="ProductData">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="SmallDescription" ColumnName="SmallDescription" />
+                <ScalarProperty Name="SmallImage" ColumnName="SmallImage" />
+                <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+                <ScalarProperty Name="LongImage" ColumnName="LongImage" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserDatas">
+            <EntityTypeMapping TypeName="PMSModel.UserData">
+              <MappingFragment StoreEntitySet="UserData">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="PMSModel.Log">
+              <MappingFragment StoreEntitySet="Logs">
+                <ScalarProperty Name="LoggedOnDate" ColumnName="LoggedOnDate" />
+                <ScalarProperty Name="AdditionalInfo" ColumnName="AdditionalInfo" />
+                <ScalarProperty Name="InnerException" ColumnName="InnerException" />
+                <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="CallSite" ColumnName="CallSite" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="LogId" ColumnName="LogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

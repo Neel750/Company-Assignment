@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .row {
+        padding: 25px;
+        text-decoration-style: solid;
+        color: chocolate;
+    }
+</style>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<div class="row justify-content-center align-items-center h-100">
+    @if (TempData["EmptyProduct"] != null)
+    {
+        <script type="text/javascript">
+            $(document).ready(function () {
+                    alert('@TempData["EmptyProduct"]');
+            });
+        </script>
+    }
+    <h1>Welcome @HttpContext.Current.Session["userName"]</h1>
+</div>
