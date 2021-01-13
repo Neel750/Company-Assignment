@@ -1,0 +1,16 @@
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\obj\Debug\HMS.BAL.csprojAssemblyReference.cache
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\obj\Debug\HMS.BAL.csproj.CoreCompileInputs.cache
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.BAL.dll
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.BAL.pdb
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.DAL.dll
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.Model.dll
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\AutoMapper.dll
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\EntityFramework.dll
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.DAL.pdb
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.DAL.dll.config
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\HMS.Model.pdb
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\AutoMapper.xml
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\bin\Debug\EntityFramework.xml
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\obj\Debug\HMS.BAL.csproj.CopyComplete
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\obj\Debug\HMS.BAL.dll
+C:\Users\shahn\Desktop\WebApiAssignment\WebApiAssignment\HMS.BAL\obj\Debug\HMS.BAL.pdb

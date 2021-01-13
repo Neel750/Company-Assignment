@@ -1,0 +1,2103 @@
+{
+	"info": {
+		"_postman_id": "c316e393-f696-44be-88b8-54610ec0f5ef",
+		"name": "Hotel Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Hotel",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Hotel/PostCreateHotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"City Point\",\r\n    \"Address\": \" Anand Sojitra Road, Borsad Chowkdi , Near Jilla Seva Sadan,\",\r\n    \"City\": \"Anand\",\r\n    \"Pincode\": 388001,\r\n    \"ContactNumber\": \"02692 264 429\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"City Point\",\r\n    \"Address\": \" Opp. Uma Bhavan, Nr. Municipal Tank, Anand Sojitra Road, Borsad, Char Rasta,\",\r\n    \"City\": \"Anand\",\r\n    \"Pincode\": 388001,\r\n    \"ContactNumber\": \"9727846100\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "3rd Request"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Kalrav Restaurant\",\r\n    \"Address\": \" Amul Dairy Rd, Near Amul, Nandanvan Society, Popati Nagar,\",\r\n    \"City\": \"Anand\",\r\n    \"Pincode\": 388001,\r\n    \"ContactNumber\": \"2692240429\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "4th Hotel"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Jassi De Parathe\",\r\n    \"Address\": \"B322, H. M. Patel Shopping Center, Anand - Vidyanagar Rd,\",\r\n    \"City\": \"Anand\",\r\n    \"Pincode\": 388001,\r\n    \"ContactNumber\": \"9328507129\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "5th Hotel"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Hotel H\",\r\n    \"Address\": \"Hotel H, Anand - Vidyanagar Rd, Vivekanand Wadi,\",\r\n    \"City\": \"Anand\",\r\n    \"Pincode\": 388001,\r\n    \"ContactNumber\": \"7984015064\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "6th Hotel"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Novotel Ahmedabad\",\r\n    \"Address\": \"Iscon Cross Roads, Sarkhej - Gandhinagar Hwy, next to Wide Angle Cinema,\",\r\n    \"City\": \"Ahmedabad\",\r\n    \"Pincode\": 380015,\r\n    \"ContactNumber\": \"7940606060\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "7th Hotel"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Sayaji Hotel\",\r\n    \"Address\": \"opp. parsi Agyari, Parshuram Nagar, Sayajiganj,\",\r\n    \"City\": \"Vadodara\",\r\n    \"Pincode\": 390005,\r\n    \"ContactNumber\": \"02652476666\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "8th Hotel"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Hotel Le Grande Residency\",\r\n    \"Address\": \"B/h., Gujarat College, Old Sharda Mandir, Cross Rd, nr. Parimal Garden, Ellisbridge,\",\r\n    \"City\": \"Ahmedabad\",\r\n    \"Pincode\": 380006,\r\n    \"ContactNumber\": \"8511189775\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "9th Hotel"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Hotel/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Hotel Shital Inn\",\r\n    \"Address\": \"9/C Nehru Park Opp Sardar Center, Lad Society Rd, Vastrapur,\",\r\n    \"City\": \"Ahmedabad\",\r\n    \"Pincode\": 380015,\r\n    \"ContactNumber\": \"7948001010\",\r\n    \"ContactPerson\": \"Manager\",\r\n    \"IsActive\": 1,\r\n    \"CreatedBy\": \"Neel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								""
+							]
+						},
+						"description": "10th Hotel"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "admin",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "Admin",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Post Room",
+			"item": [
+				{
+					"name": "1st",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 1,\r\n    \"Name\" : \"3 Star\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 1200,\r\n    \"IsActive\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 1,\r\n    \"Name\" : \"3 Star Delux\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1700,\r\n    \"IsActive\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 1,\r\n    \"Name\" : \"5 Star Delux\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 2500,\r\n    \"IsActive\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 1,\r\n    \"Name\" : \"5 Star\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1900,\r\n    \"IsActive\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 1,\r\n    \"Name\" : \"5 Star\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 2000,\r\n    \"IsActive\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "5th Room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2nd",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 2,\r\n    \"Name\" : \"2 Star\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 500,\r\n    \"IsActive\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 2,\r\n    \"Name\" : \"3 Star\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 700,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Neel\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 2,\r\n    \"Name\" : \"3 Star Delux\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1000,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Manager\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 2,\r\n    \"Name\" : \"5 Star\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1250,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Manager\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th Room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "3rd",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 3,\r\n    \"Name\" : \"5 Star Delux\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 2200,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 3,\r\n    \"Name\" : \"5 Star Delux\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1500,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 3,\r\n    \"Name\" : \"3 Star Delux\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1700,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "4th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 4,\r\n    \"Name\" : \"Delux\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 700,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Receptionist\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 4,\r\n    \"Name\" : \"Super Delux\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 1000,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Receptionist\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 4,\r\n    \"Name\" : \"Ultra Delux\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1500,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Receptionist\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 4,\r\n    \"Name\" : \"5 Star Ultra Delux\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 3500,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 4,\r\n    \"Name\" : \"5 Star\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1700,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "5th room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "5th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 5,\r\n    \"Name\" : \"5 Star\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1700,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Owner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st Room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 5,\r\n    \"Name\" : \"Super Delux\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 3000,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Ramu\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 5,\r\n    \"Name\" : \"Simple\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 500,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Ramu\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd Room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "6th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 6,\r\n    \"Name\" : \"Simple\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 300,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Raju\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 6,\r\n    \"Name\" : \"Middle Class\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 500,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Jayanti\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 6,\r\n    \"Name\" : \"High Class\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1000,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Jayanti\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 6,\r\n    \"Name\" : \"Delux\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1200,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Jayanti\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "7th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 7,\r\n    \"Name\" : \"Non AC\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 350,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Chintan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 7,\r\n    \"Name\" : \"Non AC Delux\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 550,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Chintan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 7,\r\n    \"Name\" : \"AC Delux\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 750,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Chintan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 7,\r\n    \"Name\" : \"AC Delux\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1230,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Chintan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 7,\r\n    \"Name\" : \"AC\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 830,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Chintan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "5th"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "8th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 8,\r\n    \"Name\" : \"AC\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 560,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Rahul\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 8,\r\n    \"Name\" : \"AC Delux\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 760,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Rahul\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 8,\r\n    \"Name\" : \"Non AC Delux\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 200,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Rahul\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "9th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 9,\r\n    \"Name\" : \"Delux\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 430,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Digvijay\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "1st room   "
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 9,\r\n    \"Name\" : \"Delux Room\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 760,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Digvijay\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 9,\r\n    \"Name\" : \"Delux AC Room\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1760,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Digvijay\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 9,\r\n    \"Name\" : \"Delux Non AC Room\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1760,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Digvijay\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th room"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "10th",
+					"item": [
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 10,\r\n    \"Name\" : \"Delux AC Room\",\r\n    \"Category\" : \"Categories 2\",\r\n    \"Price\" : 1530,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Amish\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "2nd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 10,\r\n    \"Name\" : \"Delux Room\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 780,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Amish\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "3rd room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 10,\r\n    \"Name\" : \"Delux Room\",\r\n    \"Category\" : \"Categories 1\",\r\n    \"Price\" : 780,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Amish\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "4th room"
+							},
+							"response": []
+						},
+						{
+							"name": "https://localhost:44393/api/Room/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HotelId\" : 10,\r\n    \"Name\" : \"Delux Room\",\r\n    \"Category\" : \"Categories 3\",\r\n    \"Price\" : 1199,\r\n    \"IsActive\" : 1,\r\n    \"CreatedBy\" : \"Amish\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44393/api/Room/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44393",
+									"path": [
+										"api",
+										"Room",
+										""
+									]
+								},
+								"description": "5th room"
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "admin",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "Admin",
+						"type": "string"
+					}
+				]
+			}
+		},
+		{
+			"name": "Get Hotels",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Hotel/List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Hotel/List",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Hotel",
+								"List"
+							]
+						},
+						"description": "Sorted In Alphabetical Order"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Room",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Hotel/List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/By/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"By",
+								""
+							]
+						},
+						"description": "Get All rooms without parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/By/Anand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/By/Anand",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"By",
+								"Anand"
+							]
+						},
+						"description": "Get rooms by city parameter"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/By/Ahmedabad/380015",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/By/Ahmedabad/380015",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"By",
+								"Ahmedabad",
+								"380015"
+							]
+						},
+						"description": "Rooms With City and Pincode"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/By/?price=1500",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/By/?price=1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"By",
+								""
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "By Price"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/By/?category=Categories 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/By/?category=Categories 2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"By",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Categories 2"
+								}
+							]
+						},
+						"description": "By Category"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/By/?category=Categories 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/By/?city=Anand&category=Categories 2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"By",
+								""
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Anand"
+								},
+								{
+									"key": "category",
+									"value": "Categories 2"
+								}
+							]
+						},
+						"description": "By City And Category"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Book Room",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Room/Book/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BookingDate\": \"2020-12-06\",\r\n    \"RoomId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Room/Book/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"Book",
+								""
+							]
+						},
+						"description": " POST Booked the room of hotel for particular date"
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/Book/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BookingDate\": \"2020-12-07\",\r\n    \"RoomId\": 3,\r\n    \"Status\" : \"Difinitive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Room/Book/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"Book",
+								""
+							]
+						},
+						"description": " POST Booked the room of hotel for particular date with optional status "
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/Book/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BookingDate\": \"2020-12-07\",\r\n    \"RoomId\": 3,\r\n    \"Status\" : \"Definitive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Room/Book/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"Book",
+								""
+							]
+						},
+						"description": "Definitive status"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Booking",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Booking/2/Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Booking/2/Delete",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Booking",
+								"2",
+								"Delete"
+							]
+						},
+						"description": "DELETE delete booking by booking Id (change status Deleted – soft delete) "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update Booking Status",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Booking/UpdateBooking",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\" : 1,\r\n    \"Status\" : \"Cancelled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Booking/UpdateBooking",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Booking",
+								"UpdateBooking"
+							]
+						},
+						"description": "PUT update booking status by booking Id (optional status to Definitive or Cancelled) "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Check Avaibility Of Room",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Room/GetCheckAvailableRoom/?roomId=3&date=2020-12-06",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/GetCheckAvailableRoom/?roomId=3&date=2020-12-06",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"GetCheckAvailableRoom",
+								""
+							],
+							"query": [
+								{
+									"key": "roomId",
+									"value": "3"
+								},
+								{
+									"key": "date",
+									"value": "2020-12-06"
+								}
+							]
+						},
+						"description": " GET availability of room on some particular date (parameter), Response: should be return True False only "
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:44393/api/Room/GetCheckAvailableRoom/?roomId=3&date=2020-12-06",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/api/Room/GetCheckAvailableRoom/?roomId=3&date=2020-12-08",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"GetCheckAvailableRoom",
+								""
+							],
+							"query": [
+								{
+									"key": "roomId",
+									"value": "3"
+								},
+								{
+									"key": "date",
+									"value": "2020-12-08"
+								}
+							]
+						},
+						"description": "true"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update Booking Date",
+			"item": [
+				{
+					"name": "https://localhost:44393/api/Room/PutUpdateBookingDateByRoom/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BookingDate\": \"2021-01-14\",\r\n    \"id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/api/Room/PutUpdateBookingDateByRoom/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"api",
+								"Room",
+								"PutUpdateBookingDateByRoom",
+								""
+							]
+						},
+						"description": "PUT update booking date for any room by Id "
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
